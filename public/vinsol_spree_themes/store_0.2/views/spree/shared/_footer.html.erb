@@ -1,0 +1,94 @@
+<footer class="primary-footer">
+  <div class="subscribe-newsletter-area">
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-md-8 col-md-offset-2">
+          <div class="text-center common-heading"> Subscribe to Our Newsletter </div>
+          <p class="text-center">New products, New price deals, and new cool ideas for the christmas season!</p>
+          <%= form_tag(newsletter_subscriptions_create_path, :method => "post") do %>
+          <div class="row">
+            <div class="col-sm-5 form-group">
+              <%= label_tag(:name, "Name:") %>
+              <%= text_field_tag(:name, nil, class:"form-control") %>
+            </div>
+            <div class="col-sm-5 form-group">
+              <%= label_tag(:email, "Email:") %>
+              <%= text_field_tag(:email, nil, class:"form-control") %>
+            </div>
+            <div class="col-sm-2 form-group">
+              <%= submit_tag("Subscribe", class:"btn btn-block btn-subscribe") %>
+            </div>
+            <% end %>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-4">
+        <div id="logo" class="logo_area" data-hook>
+          <%= link_to (image_tag "vucciz_logo_flat", class: "logo-desktop"), root_path %>
+        </div>
+        <!-- <ul class="social">
+          <li>
+            <a href="javascript:void(0);" class="fa fa-facebook"></a>
+          </li>
+          <li>
+            <a href="javascript:void(0);" class="fa fa-twitter"></a>
+          </li>
+          <li>
+            <a href="javascript:void(0);" class="fa fa-instagram"></a>
+          </li>
+          <li>
+            <a href="javascript:void(0);" class="fa fa-youtube-square"></a>
+          </li>
+        </ul> -->
+
+      </div>
+      <div class="col-sm-8">
+        <div class="row">
+          <div class="col-sm-3">
+            <h3 class="decorated-heading">
+              <span>Company</span>
+            </h3>
+            <ul class="footer-nav">
+              <li>
+                <%=link_to 'Contact Us', contact_us_path %></li>
+              <!-- <li><%=link_to 'About Us', about_us_path %></li> -->
+            </ul>
+          </div>
+          <div class="col-sm-3">
+            <h3 class="decorated-heading">
+              <span>Need Help</span>
+            </h3>
+            <ul class="footer-nav">
+              <li><%=link_to 'Help and FAQ', help_faq_path %></li>
+            </ul>
+          </div>
+          <div class="col-sm-3">
+            <h3 class="decorated-heading">
+              <span>More Info</span>
+            </h3>
+            <ul class="footer-nav">
+              <!-- <li><%=link_to 'Privacy Policy', privacy_policy_path %></li> -->
+              <li><%=link_to 'Terms of Use', terms_of_use_path %></li>
+            </ul>
+          </div>
+          <div class="col-sm-3">
+            <h3 class="decorated-heading">
+              <span>Get in Touch</span>
+            </h3>
+            <ul class="footer-nav">
+              <li><a href="javascript:void(0);">contact@vucciz.com</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+
+</footer>
