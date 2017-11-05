@@ -1,0 +1,20 @@
+<div id="spree-header">
+  <header id="header" data-hook>
+    <div class="container">
+      <div class="row">
+        <figure id="logo" class="col-md-4 col-sm-3" data-hook>
+          <%= logo %>
+          <%= link_to root do %>
+             <%= image_tag "vucciz_logo_flat" class: "logo-desktop" %>
+             <%= image_tag "vucciz_logo_pink" class: "logo-mobile" %>
+          <% end %>
+          
+        </figure>
+        <%= render partial: 'spree/shared/nav_bar' %>
+      </div>
+    </div>
+  </header>
+  <div class="container">
+    <%= render partial: 'spree/shared/main_nav_bar' if store_menu? %>
+  </div>
+</div>
