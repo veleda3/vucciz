@@ -10,17 +10,16 @@ SpreeContactUs.setup do |config|
   config.mailer_from = nil
 
   # Configure the e-mail address which should receive the contact form email notifications.
-  config.mailer_to = "contact@vucciz.com"
+  config.mailer_to = "admin@vucciz.com"
 
   # ==> Form Configuration
 
   # Configure the form to ask for the users name.
-  config.require_name = false
+  config.require_name = true
 
   # Configure the form to ask for a subject.
   config.require_subject = false
 
-config.require_name = true
-config.require_subject = true
+
 
 end
